@@ -27,12 +27,12 @@ function App() {
       setMode("dark");
       document.body.style.backgroundColor = "grey";
       showAlert("Dark Mode has been Enabled", "success");
-      document.title = "TextUtils - Dark Mode";
+      // document.title = "TextUtils - Dark Mode";
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
       showAlert("Light Mode has been Enabled", "success");
-      document.title = "TextUtils - Light Mode";
+      // document.title = "TextUtils - Light Mode";
     }
   };
   return (
@@ -47,9 +47,9 @@ function App() {
         <div className="container my-3">
           <Routes>
             {/* Exact Path helps in going to the intended path  */}
-            <Route exact path="/about" element={<About/>}/>
+            <Route exact path="/about" element={<About mode={mode}/>}/>
             <Route exact path="/" element={<TextForm
-                heading="Enter the text to analyze below"
+                heading="Try TextUtils - Word Counter Character Counter"
                 showAlert={showAlert}
                 mode={mode}
               />}/>
